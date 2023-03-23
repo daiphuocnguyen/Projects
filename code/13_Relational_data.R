@@ -10,10 +10,10 @@ library(tidyverse)
 library(nycflights13)
 
 # 13.2 nycflights13 ####
-airlines
-airports
-planes
-weather
+airlines # carrier, name
+airports # faa, name, lat, lon, alt, tz, dst, tzone
+planes # tailnum, year, type, manufacturer, model engines, seats, speed, engine
+weather # origin, year, month, day, hour, temp, dewp, humid, wind_dir, wind_speed, wind_gust, precip, pressure, visib, time_hour
 
 # 13.3 Keys ####
 planes %>%
