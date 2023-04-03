@@ -160,14 +160,14 @@ flights5 <- flights %>%
   group_by(tailnum) %>%
   summarise(avg_dep_delay = mean(dep_delay, na.rm = TRUE), avg_arr_delay = mean(arr_delay, na.rm = TRUE))
 
-flights5 <- flight5 %>%
+flights5 <- flights5 %>%
   full_join(planes1)
 
-flight5 %>%
+flights5 %>%
   ggplot(aes(x=age, y=avg_dep_delay)) +
   geom_point(na.rm = TRUE)
 
-flight5 %>%
+flights5 %>%
   ggplot(aes(x=age, y=avg_arr_delay)) +
   geom_point(na.rm = TRUE)
 
@@ -192,3 +192,4 @@ flights %>%
 flights %>%
   anti_join(planes, by = "tailnum") %>%
   count(tailnum, sort = TRUE)
+
